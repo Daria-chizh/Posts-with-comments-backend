@@ -27,13 +27,13 @@ const generatePost = (id) => ({
   comments: [
     generatePostComment(id),
     generatePostComment(id),
-    generatePostComment(id)
+    generatePostComment(id),
   ],
 });
 
 const generatePosts = () => {
   const res = [];
-  for (let id = 1; id <= POST_COUNT; id++) {
+  for (let id = 1; id <= POST_COUNT; id += 1) {
     res.push(generatePost(id));
   }
   return res;
